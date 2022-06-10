@@ -7,6 +7,7 @@ import IMG_Contact from "../../assets/images/contact01.png"
 import { FaTwitter, FaTelegramPlane, FaDiscord } from "react-icons/fa"
 import { BsMedium } from "react-icons/bs"
 import PDF from "../../assets/memo/PLATO'S MEMORANDUM.pdf"
+import Adver_Video from "../../assets/video/Liberated Mind.mp4"
 // import CustomBtn from '../../components/CustomBtn';
 // import { useWeb3React } from "@web3-react/core";
 // import { injected, walletConnect, trustWallet, binance_wallet } from "../../utils/connectors";
@@ -15,6 +16,10 @@ import PDF from "../../assets/memo/PLATO'S MEMORANDUM.pdf"
 // import { TRVL_ABI, THOMAS_ABI } from "../../utils/abi";
 
 const Content = () => {
+    // const vidRef = useRef(null);
+    // const handlePlayVideo = () => {
+    //     vidRef.current.play();
+    // }
     useEffect(() => {
 
     })
@@ -47,9 +52,17 @@ const Content = () => {
             </HeaderPart>
             <ContentPart>
                 <LeftPart01>
-                    <img src={IMG_Advertising} width="80%" height={"100%"} style={{
-                        borderRadius: "30px"
-                    }} alt="" />
+                    <Box display={"flex"} width={"80%"} height={"100%"} >
+                        {/* <img src={IMG_Advertising} width="100%" height={"100%"} style={{
+                            borderRadius: "30px"
+                        }} alt="" /> */}
+                        <video controls  poster={IMG_Advertising} width={"100%"} height={'100%'} style={{
+                            objectFit:"fill"
+                        }} >
+                            <source src={Adver_Video} width={"100%"} height={'100%'} type="video/mp4" />
+                        </video>
+                    </Box>
+
                 </LeftPart01>
                 <RightPart01>
                     <Box display={"flex"} width={"90%"} height={"100%"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"}>
@@ -311,17 +324,17 @@ const ContentLetter01 = styled(Box)`
     text-align: center;
     text-transform: uppercase; 
     color: white;
-    font-size:1.5rem;
+    font-size:1.3rem;
     font-weight: 500;
     margin-top: auto;
     margin-bottom: auto;
     @media (max-width: 1500px) {
         transition: 0.3s;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     @media (max-width: 1300px) {
         transition: 0.3s;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 `
 

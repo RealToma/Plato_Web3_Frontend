@@ -119,6 +119,7 @@ const StyledComponent = styled(Box)`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
+  object-fit: cover;
   /* background-color: #F9F9F9; */
 `
 export default App;
