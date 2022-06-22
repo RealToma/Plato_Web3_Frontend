@@ -1,6 +1,6 @@
 import { Box } from '@material-ui/core';
 import styled from "styled-components";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import IMG_Button1 from "../../assets/images/button01.png"
 import IMG_Advertising from "../../assets/images/advertising01.jpeg"
 import IMG_Contact from "../../assets/images/contact01.png"
@@ -15,11 +15,11 @@ import Adver_Video from "../../assets/video/Liberated Mind.mp4"
 // import { CONTRACTS } from "../../utils/constants";
 // import { TRVL_ABI, THOMAS_ABI } from "../../utils/abi";
 
+
 const Content = () => {
-    // const vidRef = useRef(null);
-    // const handlePlayVideo = () => {
-    //     vidRef.current.play();
-    // }
+
+    const myRef = useRef(null);
+    const executeScroll = () => myRef.current.scrollIntoView();
     useEffect(() => {
 
     })
@@ -36,13 +36,17 @@ const Content = () => {
                                 BUY ON UNISWAP
                             </BuyButton>
                         </BuyPart>
-                        <LogoPart>
+                        <LogoPart onClick={() => {
+
+                        }}>
                             PLATOS ACADEMY
                         </LogoPart>
                     </Box>
                     <LinkPart>
                         <LinkMobile01>
-                            <Link01>HOME</Link01>
+                            <Link01 onClick={() => {
+                                executeScroll();
+                            }}>HOME</Link01>
                             <Link01>STAKING</Link01>
                             <Link01>SWAP</Link01>
                             <Link02 onClick={() => {
@@ -66,7 +70,7 @@ const Content = () => {
                     </LinkPart>
                 </HeaderPart01>
             </HeaderPart>
-            <ContainPart01>
+            <ContainPart01 ref={myRef}>
                 <ContentPart>
                     <LeftPart01>
                         <Box display={"flex"} width={"80%"} height={"100%"} >
@@ -176,6 +180,9 @@ const LogoPart = styled(Box)`
     font-size: 3rem;
     font-weight: 700;
     color: white;
+    &:hover{
+        cursor: pointer;
+    }
     @media (max-width: 1500px) {
         transition: 0.5s;
         font-size: 2.5rem;
