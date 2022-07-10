@@ -99,7 +99,7 @@ const Content = () => {
                 </ContentPart>
                 <FooterPart>
                     <ContactBtn onClick={() => {
-                        window.open("https://twitter.com/wearetruthdao", "_blank");
+                        window.open("https://www.twitter.com/platotruthdao", "_blank");
                     }}><FaTwitter /></ContactBtn>
                     <ContactBtn onClick={() => {
                         window.open("https://medium.com/@platowrites", "_blank");
@@ -108,7 +108,7 @@ const Content = () => {
 
                     }}><FaDiscord /></ContactBtn>
                     <ContactBtn onClick={() => {
-                        window.open("https://t.me/+GvAjBuU4401jNjM1", "_blank");
+                        window.open("https://t.me/platosacademy", "_blank");
                     }}><FaTelegramPlane /></ContactBtn>
                 </FooterPart>
             </ContainPart01>
